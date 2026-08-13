@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h3>Live text, it goes as you type!!!</h3>
+
+  <input placeholder="Feeling lucky?" class="js-input" onkeyup="liveText()">
+
+  <p class="js-text">Check this!</p>
+  
+  <script>
+
+    function liveText() {
+
+      const inputElement = document.querySelector('.js-input').value;
+
+      //const text = inputElement.value;
+
+      document.querySelector('.js-text').innerHTML = inputElement;
+
+    }
+
+    
+
+  </script>
+  
+</body>
+</html>

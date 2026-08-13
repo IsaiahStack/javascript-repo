@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- Add localStorage to the calculator project.
+   Whenver we update de calculation it saves it using setItem().
+   When the page first loads, get calculation using .getItem()
+   Use the defautl value of 'if a calculation doesn't exist'
+  -->
+
+  <h3>Calculator</h3>
+
+  <button onClick=" updateCalculation('1');">1</button>
+  <button onClick=" updateCalculation('2') ">2</button>
+  <button onClick=" updateCalculation('3') ">3</button>
+  <button onClick=" updateCalculation('+') ">+</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('4') ">4</button>
+  <button onClick=" updateCalculation('5') ">5</button>
+  <button onClick=" updateCalculation('6') ">6</button>
+  <button onClick=" updateCalculation('-') ">-</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('7') ">7</button>
+  <button onClick=" updateCalculation('8') ">8</button>
+  <button onClick=" updateCalculation('9') ">9</button>
+  <button onClick=" updateCalculation('*') ">*</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('0') ">0</button>
+  <button onClick=" updateCalculation('.') ">.</button>
+  <button onClick=" updateCalculation('/') ">/</button>
+
+  <!--Eval here runs the string in calculation so if you press the button 1 + 2 the variable calculation will have it stored then you asign that values to calculation with the code calculation = eval(calculation) so calculation is the result of the operation done by eval-->
+  <button onClick="
+  calculation = eval(calculation);
+  console.log(calculation)
+  saveCalculation();
+  ">=</button>
+
+  <p></p>
+
+  <button onClick="calculation = ''; console.log('Cleared.'); localStorage.removeItem(calculation); ">Clear</button>
+
+  <script>
+
+    /*Add local storage to the calculator project. When updating save it using .setitem() and when the page first load it using .getitem() use a defualt value of if calculation doesn't exist in local storage. */
+
+    /*Algorithm
+    First, save the calculation to local storage
+    Second, when the page loads get the calculation
+    Third if the calculation doesn't exist in local storage, set it to an empty string 
+    */
+
+
+    let calculation = localStorage.getItem('calculation') || '';
+
+    function updateCalculation(value) {
+
+      calculation += value;
+      saveCalculation();
+      console.log(calculation);
+
+    }
+
+    function saveCalculation() {
+      localStorage.setItem('calculation', calculation);
+    }
+
+  </script>
+
+</body>
+
+</html>

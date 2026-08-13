@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Calculator</title>
+</head>
+<body>
+
+  <h3>Shipping Calculator</h3>
+
+  <p>Order under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+
+  <input type="number" placeholder="cost of order" class="js-cost" onkeydown="handleKeyDown(event)"> 
+
+  <button onclick="costOfOrder();">Calculate</button>
+
+  <p class="js-result"></p>
+
+  
+
+  <script>
+
+    const costElement = document.querySelector('.js-cost');
+    const resultElement = document.querySelector('.js-result');
+
+    function costOfOrder() {
+
+      let cost = Number(costElement.value) * 100;
+
+      if (cost === 0 || isNaN(cost) ) {
+        resultElement.innerHTML = `Invalid value!!!`;
+      } else {
+        if (cost < 4000) {
+        cost = cost + 1000;
+        resultElement.innerHTML = `$${cost / 100}`;
+        } else {
+          resultElement.innerHTML = `$${cost / 100}`;
+        }
+      }
+      
+    }
+
+    function handleKeyDown(event) {
+      if (event.key === 'Enter') {
+        costOfOrder();
+      }
+    } 
+
+
+  </script>
+  
+</body>
+</html>
