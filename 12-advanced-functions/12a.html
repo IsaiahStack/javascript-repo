@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+</head>
+<body>
+
+  <button class="js-start" onclick="timeout()">Start</button>
+
+  <button class="js-cart" onclick="addToCart()">Add to cart</button>
+
+  <p class="js-added"></p>
+
+  <button class="js-add" onclick="messagesAdd()">Add</button>
+
+  <button class="js-remove" onclick="messagesSubstract()">Remove</button>
+
+  <script>
+
+    let messages = 2;
+
+    let intervalId;
+
+    function messagesAdd() {
+      messages++;
+      notification()
+    }
+
+    function messagesSubstract() {
+      if (messages <= 0) {
+      } else { 
+        messages--;
+      }
+      notification()
+    }
+
+    function notification() {
+
+      clearInterval(intervalId)
+
+      if (messages > 0) {
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000)
+      } else if (messages === 0) {
+        document.title = 'App';
+      }
+
+    }
+
+    /*
+
+    setInterval(function() {
+      if (document.title === 'App') {
+        document.title = `(${messages}) New messages`;
+      } else {
+        document.title = 'App';
+      }
+    }, 1000)
+;
+    const add = function() {
+      console.log(2 + 3)
+    };
+
+    //add();
+    //add();
+
+    function runTwice(fun) {
+      add();
+      add();
+    }
+
+
+    runTwice(function() {
+      console.log('12b');
+    });
+
+    runTwice(add);
+
+    function timeout() {
+
+      document.querySelector('.js-start').innerHTML = 'Loading!'
+
+      setTimeout(function() { 
+        document.querySelector('.js-start').innerHTML = 'Finished!'
+      }, 1000)
+    }
+    
+    let timeoutId;
+
+    function addToCart() {
+
+      document.querySelector('.js-added').innerHTML = 'Added to cart!';
+
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(function() {
+          document.querySelector('.js-added').innerHTML = ''
+      }, 2000)
+   
+
+    } */
+
+    
+
+  </script>
+  
+</body>
+</html>

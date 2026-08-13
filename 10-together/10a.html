@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .body{
+
+    }
+
+    .add-to-cart{
+      background-color: rgb(255, 216, 20);
+      border: none;
+      height: 30px;
+      width: 150px;
+      border-radius: 20px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .Request-now{
+      background-color: rgb(24, 24, 24);
+      color: white;
+      border: none;
+      height: 40px;
+      width: 120px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .Schedule-for-later{
+      background-color: rgb(230, 230, 230);
+      border: none;
+      height: 40px;
+      width: 160px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .gaming{
+      background-color: rgb(230, 230, 230);
+      border: none;
+      height: 40px;
+      width: 120px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .music{
+      background-color: rgb(230, 230, 230);
+      border: none;
+      height: 40px;
+      width: 120px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .tech{
+      background-color: rgb(230, 230, 230);
+      border: none;
+      height: 40px;
+      width: 120px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .is-toggled{
+      background-color: rgb(24, 24, 24);
+      color: white;
+      border: none;
+      height: 40px;
+      width: 120px;
+      border-radius: 5px;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <button class="add-to-cart">Add to cart</button>
+
+  <button class="Request-now">Request now</button>
+  <button class="Schedule-for-later">Schedule for later</button>
+
+  <button class="js-button">test</button>
+
+  <p></p>
+
+  <button class="js-gaming gaming" onclick="toggled('.js-gaming');">Gaming</button>
+
+  <button class="js-music music" onclick="toggled('.js-music');
+  ">Music</button>
+
+  <button class="js-tech tech" onclick="toggled('.js-tech')
+  ">Tech</button>
+
+  <script>
+
+    const button = document.querySelector('.js-button').classList.contains('js-button');
+    //console.log(button.classList.contains('js-button'));
+
+    function toggled(option) {
+
+      const button = document.querySelector(option);
+      if (!button.classList.contains('is-toggled')) {
+
+        turnOff()
+
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled')
+      }
+
+      
+      /*
+      if (gamingElement.classList.toggle('is-toggled')) {
+        musicElement.classList.remove('is-toggled');
+        techElement.classList.remove('is-toggled');
+      } else if (musicElement.classList.toggle('is-toggled')) {
+        gamingElement.classList.remove('is-toggled');
+        techElement.classList.remove('is-toggled');
+      } else if (techElement.classList.toggle('is-toggled')) {
+        gamingElement.classList.remove('is-toggled');
+        musicElement.classList.remove('is-toggled')
+      }*/
+
+      //gamingElement.classList.toggle('is-toggled') code bellow is the same as this = v
+      /*
+      if (gamingElement.classList.contains('is-toggled')) {
+        gamingElement.classList.remove('is-toggled');
+      } else {
+        gamingElement.classList.add('is-toggled');
+      };*/
+    
+    }
+
+
+    function turnOff() {
+      const prevButton = document.querySelector('.is-toggled');
+      if (prevButton) {
+        prevButton.classList.remove('is-toggled');
+      }
+    }
+
+  </script>
+  
+</body>
+</html>
