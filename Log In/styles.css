@@ -1,0 +1,22 @@
+body{
+  background-color: #000000;
+  color: #fff;
+  min-height: 100vh; /*You need to set the height to center itemsa since it won't do it automatically like with the width*/
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container{
+  background-color: #191919;
+  width: 30vw; /*vw is for view width just like how vh is for view height*/
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  border: solid #fff;
+}
