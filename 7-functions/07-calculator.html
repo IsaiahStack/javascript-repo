@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h3>Calculator</h3>
+
+  <button onClick=" updateCalculation('1');">1</button>
+  <button onClick=" updateCalculation('2') ">2</button>
+  <button onClick=" updateCalculation('3') ">3</button>
+  <button onClick=" updateCalculation('+') ">+</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('4') ">4</button>
+  <button onClick=" updateCalculation('5') ">5</button>
+  <button onClick=" updateCalculation('6') ">6</button>
+  <button onClick=" updateCalculation('-') ">-</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('7') ">7</button>
+  <button onClick=" updateCalculation('8') ">8</button>
+  <button onClick=" updateCalculation('9') ">9</button>
+  <button onClick=" updateCalculation('*') ">*</button>
+
+  <p></p>
+
+  <button onClick=" updateCalculation('0') ">0</button>
+  <button onClick=" updateCalculation('.') ">.</button>
+  <button onClick=" updateCalculation('/') ">/</button>
+
+  <!--Eval here runs the string in calculation so if you press the button 1 + 2 the variable calculation will have it stored then you asign that values to calculation with the code calculation = eval(calculation) so calculation is the result of the operation done by eval-->
+  <button onClick=" calculation = eval(calculation); console.log(calculation)">=</button>
+
+  <p></p>
+
+  <button onClick="calculation = ''; console.log('Cleared.') ">Clear</button>
+
+  <script>
+
+    let calculation = '';
+
+    function updateCalculation(value) {
+
+      calculation += value;
+      console.log(calculation);
+
+    }
+
+  </script>
+
+</body>
+
+</html>

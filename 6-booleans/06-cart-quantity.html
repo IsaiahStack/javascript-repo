@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+
+<body>
+
+  <h3>Cart Quantity</h3>
+
+  <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">Show Quantity</button>
+
+  <button onclick=" // cartQuantity + 1 is literally checking if the sum of the cart + 1 excedes the limit
+    if (cartQuantity + 1  > 100) {
+      alert('Cart is full!');
+    } else {S
+      cartQuantity++;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    }
+  ">Add 1 Item</button>
+
+  <button onClick=" 
+    if (cartQuantity + 2 > 100) {
+      alert('Cart is full!');
+    } else {
+      cartQuantity += 2;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    }
+  ">Add 2 Items</button>
+
+  <button onClick="
+    if (cartQuantity + 3 > 100) {
+      alert('Cart is full!');
+    } else {
+      cartQuantity += 3;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    }
+  ">Add 3 Items</button>
+
+  <button onclick=" 
+  if (cartQuantity - 1 < 0) {
+      alert('Cart is empty!');
+      } else {
+        cartQuantity--;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+  ">Remove 1 Item</button>
+
+  <button onclick=" 
+    if (cartQuantity - 2 < 0) {
+      alert('Cart is empty!');
+      } else {
+        cartQuantity--;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+  ">Remove 2 Items</button>
+
+  <button onclick=" 
+    if (cartQuantity - 3 < 0) {
+      alert('Cart is empty!');
+      } else {
+        cartQuantity--;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+  ">Remove 3 Items</button>
+
+  <button onclick=" cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: ${cartQuantity}`)">Reset Cart</button>
+
+    <script>
+
+      let cartQuantity = 0;
+
+
+    </script>
+  </body>
+</html>
