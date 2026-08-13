@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h3>Calculator</h3>
+  <button onClick=" calculation += '1'; console.log(calculation)">1</button>
+  <button onClick=" calculation += '2'; console.log(calculation)">2</button>
+  <button onClick=" calculation += '3'; console.log(calculation)">3</button>
+  <button onClick=" calculation += '+'; console.log(calculation)">+</button>
+  <p></p>
+  <button onClick=" calculation += '4'; console.log(calculation)">4</button>
+  <button onClick=" calculation += '5'; console.log(calculation)">5</button>
+  <button onClick=" calculation += '6'; console.log(calculation)">6</button>
+  <button onClick=" calculation += '-'; console.log(calculation)">-</button>
+  <p></p>
+  <button onClick=" calculation += '7'; console.log(calculation)">7</button>
+  <button onClick=" calculation += '8'; console.log(calculation)">8</button>
+  <button onClick=" calculation += '9'; console.log(calculation)">9</button>
+  <button onClick=" calculation += '*'; console.log(calculation)">*</button>
+  <p></p>
+  <button onClick=" calculation += '0'; console.log(calculation)">0</button>
+  <button onClick=" calculation += '.'; console.log(calculation)">.</button>
+  <button onClick=" calculation += '/'; console.log(calculation)">/</button>
+  <!--Eval here runs the string in calculation so if you press the button 1 + 2 the variable calculation will have it stored then you asign that values to calculation with the code calculation = eval(calculation) so calculation is the result of the operation done by eval-->
+  <button onClick=" calculation = eval(calculation); console.log(calculation)">=</button>
+  <p></p>
+  <button onClick="calculation = ''; console.log('Cleared.') ">Clear</button>
+
+
+  <script>
+
+    let calculation = '';
+
+  </script>
+</body>
+</html>
